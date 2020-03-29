@@ -1,6 +1,7 @@
 var s;
 var random_x;  
 var random_y;
+var level = 10;
 
 
 
@@ -25,10 +26,11 @@ function draw(){
     
     if(dist(s.x,s.y,random_x,random_y) < scl) {
         update_food_pos();
-        console.log(random_x + ' ' + random_y)
+        s.total++;
+        level++;
     }
 
-    frameRate(10);
+    frameRate(level);
 }
 
 function createFood(){
